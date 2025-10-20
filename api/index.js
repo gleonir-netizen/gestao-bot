@@ -1,4 +1,6 @@
-// api/index.js - VERSÃO FUNCIONAL
+# Criar uma versão corrigida do arquivo
+cat > api/index.js << 'EOF'
+// api/index.js - VERSÃO CORRIGIDA
 const express = require('express');
 const app = express();
 
@@ -39,10 +41,12 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Iniciar servidor
+// INICIAR SERVIDOR (LINHA QUE FALTAVA)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log('🚀 Server running on port', PORT);
 });
 
+// Export para Vercel (mantém compatibilidade)
 module.exports = app;
+EOF
