@@ -50,3 +50,6 @@ app.listen(PORT, () => {
 // Export para Vercel (mantém compatibilidade)
 module.exports = app;
 EOF
+app.listen(3000, () => {
+  console.log('🚀 Server running on port 3000');
+});
